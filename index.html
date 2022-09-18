@@ -9,6 +9,37 @@
     <title>Weather Watcher</title>
 </head>
 <body>
-    <div class="content"></div>
+    <div class="content">
+        <div class="top">
+            <form class="form" onsubmit="return false">
+                <button id="submit" type="submit">🔍</button>
+                <input type="text" name="enterCity" id="enterCity">
+            </form>
+            <div class="weatherBox">
+                <div class="header">
+                    <div class="butt">
+                        <button class="changeMeasure">F</button>
+                    </div>
+                    <div class="names">
+                        <div class="cityName"></div>
+                        <div class="countryName"></div>
+                    </div>
+                </div>
+                <div class="humidity"></div>
+                <div class="tempera"></div>
+                <div class="temp_max">
+                    <br>max
+                </div>
+                <div class="arrows">&#8644;</div>
+                <div class="temp_min">
+                    <br>min
+                </div>
+                <div class="icon"></div>
+                <div class="weatherDesc"></div>
+            </div>
+        </div>
+        <!-- <div class="bottom"> placeholder
+        </div> -->
+    </div>
 </body>
 </html>
