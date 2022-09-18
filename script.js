@@ -37,14 +37,14 @@ async function getWeatherArray(city){
          data.weather[0].icon,
          data.weather[0].description
         ]
-        drawArray(weatherArray);
+        drawDailyArray(weatherArray);
     }
     catch{
         alert('Error, please make sure you have entered a valid city name');
     }
 }
 
-function drawArray(array){
+function drawDailyArray(array){
     let cityName = document.querySelector('.cityName');
     let countryName = document.querySelector('.countryName');
     let humidity = document.querySelector('.humidity');
@@ -61,7 +61,6 @@ function drawArray(array){
     temp_min.textContent = printTempera(array[3]);
     icon.innerHTML = '<img src="./pictures/'+array[6]+'@2x.png" alt="placeholder"></img>';
     weatherDesc.textContent = capitalizeFirst(array[7]);
-
 }
 
 let form = document.querySelector('.form');
@@ -100,4 +99,5 @@ let changeMeasure = document.querySelector('.changeMeasure');
 changeMeasure.addEventListener('click', () => {
     changeDegree();
 });
+
 getWeatherArray('london');
